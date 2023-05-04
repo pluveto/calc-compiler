@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'calc-comp'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=calc-comp",
+                    "--package=calc-comp"
+                ],
+                "filter": {
+                    "name": "calc-comp",
+                    "kind": "bin"
+                }
+            },
+            "args": ["-e", "'1;mem*3;print mem-1;"],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'calc-comp'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=calc-comp",
+                    "--package=calc-comp"
+                ],
+                "filter": {
+                    "name": "calc-comp",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

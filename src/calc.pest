@@ -1,0 +1,25 @@
+grammar = { trans_unit ~ EOI }
+
+trans_unit = { block }
+
+block = { stmt* }
+
+stmt = { expr_stmt | print_stmt }
+
+expr_stmt = { expr ~ ";" }
+
+print_stmt = { "print" ~ expr ~ ";" }
+
+expr = { prefix_op* ~ primary_expr ~ postfix_op* ~ (infix_op ~ prefix_op* ~ primary_expr ~ postfix_op* )* }
+
+prefix_op = { "+" | "-" }
+
+postfix_op = { "not_implemented" }
+
+infix_op = { "+" | "-" | "*" | "/" }
+
+primary_expr = { MEM | INT | "(" ~ expr ~ ")" }
+
+INT = { ASCII_DIGIT+ }
+
+MEM = { "mem" }
