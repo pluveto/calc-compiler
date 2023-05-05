@@ -11,9 +11,10 @@ lazy_static::lazy_static! {
         use pest::pratt_parser::{Assoc::*, Op};
         // Precedence is defined lowest to highest
         PrattParser::new()
-        .op(Op::prefix(Rule::prefix_op))
-        .op(Op::infix(Rule::infix_op, Left))
         .op(Op::postfix(Rule::postfix_op))
+        .op(Op::infix(Rule::add_op, Left))
+        .op(Op::infix(Rule::mul_op, Left))
+        .op(Op::prefix(Rule::prefix_op))
     };
 }
 

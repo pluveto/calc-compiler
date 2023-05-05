@@ -40,7 +40,7 @@ pub enum InfixOp {
 }
 
 pub enum PrimaryExpr {
-    Mem,
+    Mem, // a fixed global variable
     Int(i64),
     Expr(Box<Expr>),
 }

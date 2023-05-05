@@ -1,7 +1,9 @@
+mod ir;
 mod ast;
 mod parser;
 mod driver;
 mod interpreter;
+mod codegen;
 
 #[macro_use]
 extern crate pest_derive;

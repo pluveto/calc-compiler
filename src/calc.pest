@@ -16,7 +16,11 @@ prefix_op = { "+" | "-" }
 
 postfix_op = { "not_implemented" }
 
-infix_op = { "+" | "-" | "*" | "/" }
+infix_op = _{ mul_op | add_op }
+
+mul_op = { "*" | "/" }
+
+add_op = { "+" | "-" }
 
 primary_expr = { MEM | INT | "(" ~ expr ~ ")" }
 

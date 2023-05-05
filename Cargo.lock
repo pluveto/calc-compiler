@@ -15,6 +15,7 @@ dependencies = [
 name = "calc-comp"
 version = "0.1.0"
 dependencies = [
+ "id-arena",
  "lazy_static",
  "pest",
  "pest_derive",
@@ -64,6 +65,12 @@ dependencies = [
  "typenum",
  "version_check",
 ]
+
+[[package]]
+name = "id-arena"
+version = "2.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "25a2bc672d1148e28034f176e01fffebb08b35768468cc954630da77a1449005"
 
 [[package]]
 name = "lazy_static"

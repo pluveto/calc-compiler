@@ -32,7 +32,6 @@ pub fn interpret(tu: &TransUnit) {
             }
         }
     }
-  
 }
 
 fn eval_expr(env: &mut Env, expr: &Expr) -> i64 {
