@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "calc-comp"
+name = "calcc"
 version = "0.1.0"
 dependencies = [
  "id-arena",

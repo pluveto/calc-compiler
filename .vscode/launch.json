@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'calc-comp'",
+            "name": "Debug executable 'calcc'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=calc-comp",
-                    "--package=calc-comp"
+                    "--bin=calcc",
+                    "--package=calcc"
                 ],
                 "filter": {
-                    "name": "calc-comp",
+                    "name": "calcc",
                     "kind": "bin"
                 }
             },
@@ -25,16 +25,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'calc-comp'",
+            "name": "Debug unit tests in executable 'calcc'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=calc-comp",
-                    "--package=calc-comp"
+                    "--bin=calcc",
+                    "--package=calcc"
                 ],
                 "filter": {
-                    "name": "calc-comp",
+                    "name": "calcc",
                     "kind": "bin"
                 }
             },
