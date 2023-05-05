@@ -1,5 +1,11 @@
 # Calc - A simple calculator
 
+This is a simple calculator that can evaluate expressions and print the result.
+
+Besides interpreting code, it can also execute code through Ahead-Of-Time (AOT) compilation. It has a complete compilation system that includes an Abstract Syntax Tree (AST), a Static Single Assignment (SSA) IR, and an LLVM backend.
+
+It is helpful for beginners to quickly grasp the entire process of compilation and understand the principles of LLVM.
+
 ## Pre-requisites
 
 We will take Mac OS as an example, but you can use any other OS. 
