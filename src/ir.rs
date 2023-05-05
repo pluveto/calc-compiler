@@ -6,6 +6,12 @@ use crate::ast::*;
 
 type ValueId = id_arena::Id<Value>;
 
+#[derive(Debug, Clone)]
+
+pub enum IrType {
+    Void,
+    Int,
+}
 
 pub trait ValueTrait {
     fn name(&self) -> String;
@@ -149,12 +155,6 @@ dummy_value_trait!(StoreInst);
 
 #[derive(Debug, Clone)]
 
-pub enum IrType {
-    Void,
-    Int,
-}
-#[derive(Debug, Clone)]
-
 pub struct AllocaInst {
     pub name: String,
     pub ty: IrType,
@@ -229,7 +229,6 @@ impl Context {
             next_id: 1,
             global_variables: std::collections::HashMap::new(),
         };
-        // 初始化全局变量 "mem"
         context.create_global_variable("mem".to_string());
         context
     }
@@ -248,7 +247,6 @@ impl Context {
     }
 }
 
-// 在所有相关的类型中为`to_ir`添加一个trait
 pub trait IrGenerator {
     fn to_ir(&self, context: &mut Context);
 }

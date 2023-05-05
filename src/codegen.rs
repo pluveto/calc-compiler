@@ -7,8 +7,7 @@ impl LlvmEmitter for Context {
     fn emit_ir(&self) -> String {
         let mut llvm_ir = String::new();
 
-        // Emit external print function declaration
-        // llvm_ir.push_str("declare void @print(i64)\n\n");
+        // Emit print function
         llvm_ir.push_str(r#"
 @.str = private unnamed_addr constant [6 x i8] c"%lld\0A\00", align 1
 
